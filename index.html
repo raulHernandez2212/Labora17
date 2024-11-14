@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Moderno - Desarrollador Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="cv-container">
+        <div class="download-section">
+            <button onclick="generatePDF()" class="download-btn">
+                <i class="fas fa-download"></i> Descargar CV
+            </button>
+        </div>
+
+        <div class="cv-content" id="cv-content">
+            <header class="cv-header">
+                <div class="profile-section">
+                    <div class="profile-image">
+                        <img src="/api/placeholder/200/200" alt="Foto de perfil">
+                    </div>
+                    <div class="profile-info">
+                        <h1>Raul Jesus Hernandez Reyes</h1>
+                        <h2>Desarrollador Web Full Stact</h2>
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>raul121976@hotmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+57 3008091408</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Barranquilla, Colombia</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <span>linkedin.com/in/raulhernandezreyes</span>
+                    </div>
+                </div>
+            </header>
+
+            <main class="cv-main">
+                <section class="cv-section">
+                    <h3><i class="fas fa-user"></i> PERFIL PROFESIONAL</h3>
+                    <p>Desarrollador web full stack con más de 5 años de experiencia en el diseño y desarrollo de aplicaciones web. Especializado en tecnologías JavaScript modernas y arquitecturas escalables. Apasionado por crear soluciones innovadoras y mantener las mejores prácticas de desarrollo.</p>
+                </section>
+
+                <section class="cv-section">
+                    <h3><i class="fas fa-briefcase"></i> EXPERIENCIA PROFESIONAL</h3>
+                    <div class="experience-item">
+                        <div class="date">2020 - Presente</div>
+                        <div class="content">
+                            <h4>Desarrollador Senior Full Stack</h4>
+                            <h5>Tech Solutions Inc.</h5>
+                            <ul>
+                                <li>Liderazgo técnico en proyectos de desarrollo web utilizando React y Node.js</li>
+                                <li>Implementación de arquitecturas serverless y microservicios</li>
+                                <li>Optimización de rendimiento y SEO en aplicaciones web</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="date">2018 - 2020</div>
+                        <div class="content">
+                            <h4>Desarrollador Frontend</h4>
+                            <h5>Digital Innovation Co.</h5>
+                            <ul>
+                                <li>Desarrollo de interfaces de usuario responsive</li>
+                                <li>Implementación de aplicaciones SPA con Vue.js</li>
+                                <li>Integración con APIs RESTful y GraphQL</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="cv-section">
+                    <h3><i class="fas fa-graduation-cap"></i> EDUCACIÓN</h3>
+                    <div class="experience-item">
+                        <div class="date">2014 - 2018</div>
+                        <div class="content">
+                            <h4>Ingeniería en Informática</h4>
+                            <h5>Universidad Tecnológica de Madrid</h5>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="cv-section">
+                    <h3><i class="fas fa-cogs"></i> HABILIDADES TÉCNICAS</h3>
+                    <div class="skills-container">
+                        <div class="skill-category">
+                            <h4>Frontend</h4>
+                            <div class="skill-items">
+                                <span>HTML5</span>
+                                <span>CSS3/Sass</span>
+                                <span>JavaScript</span>
+                                <span>React</span>
+                                <span>Vue.js</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Backend</h4>
+                            <div class="skill-items">
+                                <span>Node.js</span>
+                                <span>Express</span>
+                                <span>Python</span>
+                                <span>MongoDB</span>
+                                <span>PostgreSQL</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Herramientas</h4>
+                            <div class="skill-items">
+                                <span>Git</span>
+                                <span>Docker</span>
+                                <span>AWS</span>
+                                <span>Jenkins</span>
+                                <span>Jira</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="cv-section">
+                    <h3><i class="fas fa-language"></i> IDIOMAS</h3>
+                    <div class="languages-container">
+                        <div class="language-item">
+                            <span class="language">Español</span>
+                            <span class="level">Nativo</span>
+                        </div>
+                        <div class="language-item">
+                            <span class="language">Inglés</span>
+                            <span class="level">C1 - Avanzado</span>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

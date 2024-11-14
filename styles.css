@@ -1,0 +1,249 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --text-color: #333;
+    --light-text: #666;
+    --background-color: #f5f6fa;
+    --white: #ffffff;
+    --section-spacing: 25px;
+    --border-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.cv-container {
+    max-width: 210mm; /* Ancho A4 */
+    margin: 0 auto;
+    background: var(--white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.download-section {
+    text-align: center;
+    padding: 20px;
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.download-btn {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #2980b9;
+}
+
+.cv-content {
+    padding: 40px;
+}
+
+/* Header Styles */
+.cv-header {
+    margin-bottom: var(--section-spacing);
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--secondary-color);
+}
+
+.profile-info h1 {
+    color: var(--primary-color);
+    font-size: 2.5em;
+    margin-bottom: 5px;
+}
+
+.profile-info h2 {
+    color: var(--secondary-color);
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--light-text);
+}
+
+.contact-item i {
+    color: var(--secondary-color);
+}
+
+/* Main Content Styles */
+.cv-section {
+    margin-bottom: var(--section-spacing);
+    page-break-inside: avoid;
+}
+
+.cv-section h3 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.cv-section h3 i {
+    margin-right: 10px;
+    color: var(--secondary-color);
+}
+
+/* Experience Items */
+.experience-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.date {
+    min-width: 120px;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.content h4 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.content h5 {
+    color: var(--light-text);
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.content ul {
+    margin-left: 20px;
+    color: var(--text-color);
+}
+
+/* Skills Section */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skill-category h4 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.skill-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-items span {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+/* Languages Section */
+.languages-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.language-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.language {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.level {
+    color: var(--light-text);
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: none;
+        padding: 0;
+    }
+
+    .cv-container {
+        box-shadow: none;
+    }
+
+    .download-section {
+        display: none;
+    }
+
+    .cv-content {
+        padding: 20px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cv-content {
+        padding: 20px;
+    }
+
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-info {
+        justify-content: center;
+    }
+
+    .experience-item {
+        flex-direction: column;
+    }
+
+    .date {
+        min-width: auto;
+    }
+}
